@@ -3,6 +3,7 @@
 // Lab 4
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Color {
@@ -13,11 +14,15 @@ struct Color {
 
 int main () {
 
+    vector<Color> colors;
+
     Color testC = {150, 100, 50};
 
-    cout << "red: " << testC.red << endl;
-    cout << "blue: " << testC.blue << endl;
-    cout << "green: " << testC.green << endl;
+    colors.push_back(testC);
+
+    cout << "red: " << colors[0].red << endl;
+    cout << "blue: " << colors[0].blue << endl;
+    cout << "green: " << colors[0].green << endl;
     
 
     return 0;
