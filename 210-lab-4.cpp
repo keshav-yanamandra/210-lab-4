@@ -14,15 +14,23 @@ struct Color {
 
 int main () {
 
-    vector<Color> colors;
+    vector<Color> color;
+    int n = rand() % (50 - 25 + 1) + 25;
 
-    Color testC = {150, 100, 50};
+    for (int i = 0; i < n; i++) {
+        Color testC;
 
-    colors.push_back(testC);
+        testC.red = rand() % (255 - 0 + 1) + 0;
+        testC.green = rand() % (255 - 0 + 1) + 0;
+        testC.blue = rand() % (255 - 0 + 1) + 0;
 
-    cout << "red: " << colors[0].red << endl;
-    cout << "blue: " << colors[0].blue << endl;
-    cout << "green: " << colors[0].green << endl;
+        color.push_back(testC);
+    }
+
+
+    // cout << "red: " << colors[0].red << endl;
+    // cout << "blue: " << colors[0].blue << endl;
+    // cout << "green: " << colors[0].green << endl;
     
 
     return 0;
