@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 struct Color {
@@ -13,16 +16,21 @@ struct Color {
 };
 
 int main () {
+    // module 4 asked that I should not hardcode - so declaring conratnts
+    const int MIN_RANGE = 25;
+    const int MAX_RANGE = 50;
+    const int MIN_COLOR = 0;
+    const int MAX_COLOR = 255;
 
     vector<Color> color;
-    int n = rand() % (50 - 25 + 1) + 25;
+    int n = rand() % (MAX_RANGE - MIN_RANGE + 1) + MIN_RANGE;
 
     for (int i = 0; i < n; i++) {
         Color testC;
 
-        testC.red = rand() % (255 - 0 + 1) + 0;
-        testC.green = rand() % (255 - 0 + 1) + 0;
-        testC.blue = rand() % (255 - 0 + 1) + 0;
+        testC.red = rand() % (MAX_COLOR - MIN_COLOR + 1) + MIN_COLOR;
+        testC.green = rand() % (MAX_COLOR - MIN_COLOR + 1) + MIN_COLOR;
+        testC.blue = rand() % (MAX_COLOR - MIN_COLOR + 1) + MIN_COLOR;
 
         color.push_back(testC);
     }
