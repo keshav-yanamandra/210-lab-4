@@ -22,7 +22,7 @@ int main () {
     const int MIN_COLOR = 0;
     const int MAX_COLOR = 255;
 
-    vector<Color> color;
+    vector<Color> colors;
     int n = rand() % (MAX_RANGE - MIN_RANGE + 1) + MIN_RANGE;
 
     for (int i = 0; i < n; i++) {
@@ -32,14 +32,17 @@ int main () {
         testC.green = rand() % (MAX_COLOR - MIN_COLOR + 1) + MIN_COLOR;
         testC.blue = rand() % (MAX_COLOR - MIN_COLOR + 1) + MIN_COLOR;
 
-        color.push_back(testC);
+        colors.push_back(testC);
     }
 
-
-    // cout << "red: " << colors[0].red << endl;
-    // cout << "blue: " << colors[0].blue << endl;
-    // cout << "green: " << colors[0].green << endl;
+    int j = colors.size();
     
+    for (int i = 0; i < j; i++) {
+
+        cout << "red: " << colors[i].red << endl;
+        cout << "blue: " << colors[i].blue << endl;
+        cout << "green: " << colors[i].green << endl;
+    }
 
     return 0;
 }
