@@ -23,6 +23,7 @@ int main () {
     const int MAX_COLOR = 255;
 
     vector<Color> colors;
+    srand(time(0));
     int n = rand() % (MAX_RANGE - MIN_RANGE + 1) + MIN_RANGE;
 
     for (int i = 0; i < n; i++) {
