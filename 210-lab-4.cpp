@@ -6,6 +6,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ int main () {
     const int MAX_COLOR = 255;
 
     vector<Color> colors;
+
     srand(time(0));
     int n = rand() % (MAX_RANGE - MIN_RANGE + 1) + MIN_RANGE;
 
@@ -37,12 +39,17 @@ int main () {
     }
 
     int j = colors.size();
+
+    // including formatting
+    cout << left << setw(10) << "Color#" << setw(10) << "R value" << setw(10) << "G value" << setw(10) << "B value" << endl;
     
     for (int i = 0; i < j; i++) {
-
-        cout << "red: " << colors[i].red << endl;
-        cout << "blue: " << colors[i].blue << endl;
-        cout << "green: " << colors[i].green << endl;
+        cout << left
+            << setw(10) << i + 1
+            << setw(10) << colors[i].red
+            << setw(10) << colors[i].green
+            << setw(10) << colors[i].blue
+            << endl;    
     }
 
     return 0;
