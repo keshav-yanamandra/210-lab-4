@@ -39,9 +39,12 @@ int main () {
     }
 
     int j = colors.size();
-
+    cout << endl;
+    
     // including formatting
     cout << left << setw(10) << "Color#" << setw(10) << "R value" << setw(10) << "G value" << setw(10) << "B value" << endl;
+    cout << left << setw(10) << "------" << setw(10) << "-------" << setw(10) << "-------" << setw(10) << "-------" << endl;
+
     
     for (int i = 0; i < j; i++) {
         cout << left
